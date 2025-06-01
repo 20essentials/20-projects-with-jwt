@@ -1,0 +1,33 @@
+---
+import { baseUrl } from '@/utils/functions';
+const logo = baseUrl('/assets/jwt.svg');
+---
+
+<section>
+  <h1>
+    20 Projects With JWT <img src={logo} alt='Logo' />
+  </h1>
+</section>
+<style>
+  section {
+    height: 100vh;
+  }
+
+  h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5vmax;
+    text-align: center;
+    text-wrap: balance;
+    color: transparent;
+    background-image: var(--gradient-btn);
+    background-clip: text;
+
+    img {
+      width: 4vmax;
+      transform: translateY(0.3vmax);
+    }
+  }
+</style>
