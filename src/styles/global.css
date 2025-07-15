@@ -33,7 +33,7 @@ button {
 
 @font-face {
   font-family: 'Yellow-Style';
-  src: url('./assets/Yellow-Style.otf') format('opentype');
+  src: url('/assets/Yellow-Style.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
