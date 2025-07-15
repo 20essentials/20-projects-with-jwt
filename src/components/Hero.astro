@@ -10,6 +10,8 @@ const logo = baseUrl('/assets/jwt.svg');
 </section>
 <style>
   section {
+    position: relative;
+    width: 100%;
     height: 100vh;
   }
 
@@ -18,12 +20,14 @@ const logo = baseUrl('/assets/jwt.svg');
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 5vmax;
+    font-size: 5.5vmax;
     text-align: center;
     text-wrap: balance;
     color: transparent;
     background-image: var(--gradient-btn);
     background-clip: text;
+    pointer-events: none;
+    text-transform: uppercase;
 
     img {
       width: 4vmax;

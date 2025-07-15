@@ -1,163 +1,230 @@
 ---
+import { baseUrl } from '@/utils/functions';
+import Hero from './Hero.astro';
+
 const arrayCards = [
   {
-    title: 'Calendar 2024',
-    repo: 'https://github.com/20essentials/project-000-046',
-    web: 'https://20essentials.github.io/project-000-046/',
-    localImage: './assets/n46.avif',
+    title: 'Liquid Login Page',
+    repo: 'https://github.com/20essentials/liquid-login-page',
+    web: 'https://stackblitz.com/github/20essentials/liquid-login-page?file=views%2Flayout.pug',
+    localImage: '/assets/liquid-login-page.avif',
     id: '001'
   },
   {
-    title: 'Circle Animation',
-    repo: 'https://github.com/20essentials/project-000-027',
-    web: 'https://20essentials.github.io/project-000-027/',
-    localImage: './assets/n27.avif',
+    title: 'Login and Signup',
+    repo: 'https://github.com/20essentials/jwt-login-and-signup',
+    web: 'https://stackblitz.com/github/20essentials/jwt-login-and-signup?file=client%2FCustomPopover.js',
+    localImage: '/assets/jwt-login-and-signup.avif',
     id: '002'
   },
   {
-    title: 'Bosque Fondal',
-    repo: 'https://github.com/20essentials/project-000-820',
-    web: 'https://20essentials.github.io/project-000-820/',
-    localImage: './assets/n820.avif',
+    title: 'Login Bubble',
+    repo: 'https://github.com/20essentials/project-000-963',
+    web: 'https://stackblitz.com/github/20essentials/project-000-963?file=index.js',
+    localImage: '/assets/n963.avif',
     id: '003'
   },
   {
-    title: 'Circular ShortCut',
-    repo: 'https://github.com/20essentials/project-000-012',
-    web: 'https://20essentials.github.io/project-000-012/',
-    localImage: './assets/n12.avif',
+    title: 'Signup Beth Gradient',
+    repo: 'https://github.com/20essentials/project-000-972',
+    web: 'https://stackblitz.com/github/20essentials/project-000-972?file=index.js',
+    localImage: '/assets/n972.avif',
     id: '004'
   },
   {
-    title: 'Dominic Blog',
-    repo: 'https://github.com/20essentials/project-000-001',
-    web: 'https://20essentials.github.io/project-000-001/',
-    localImage: './assets/n1.avif',
+    title: 'Login Sinapsis',
+    repo: 'https://github.com/20essentials/project-000-973',
+    web: 'https://stackblitz.com/github/20essentials/project-000-973?file=index.js',
+    localImage: '/assets/n973.avif',
     id: '005'
   },
   {
-    title: 'Object View Box',
-    repo: 'https://github.com/20essentials/project-000-044',
-    web: 'https://20essentials.github.io/project-000-044/',
-    localImage: './assets/n44.avif',
+    title: 'Signup ReKord',
+    repo: 'https://github.com/20essentials/project-1002',
+    web: 'https://stackblitz.com/github/20essentials/project-1002?file=index.js',
+    localImage: '/assets/project-1002.avif',
     id: '006'
   },
   {
-    title: 'Cumul Background',
-    repo: 'https://github.com/20essentials/project-000-852',
-    web: 'https://20essentials.github.io/project-000-852/',
-    localImage: './assets/n852.avif',
+    title: 'Login Fogal',
+    repo: 'https://github.com/20essentials/project-1003',
+    web: 'https://stackblitz.com/github/20essentials/project-1003?file=client%2Fscript.js',
+    localImage: '/assets/project-1003.avif',
     id: '007'
   },
   {
-    title: 'Popover Target',
-    repo: 'https://github.com/20essentials/project-000-854',
-    web: 'https://20essentials.github.io/project-000-854/',
-    localImage: './assets/n854.avif',
+    title: 'SignUp Terraform',
+    repo: 'https://github.com/20essentials/project-1004',
+    web: 'https://stackblitz.com/github/20essentials/project-1004?file=client%2Fscript.js',
+    localImage: '/assets/project-1004.avif',
     id: '008'
   },
   {
-    title: 'Mixin Bacground',
-    repo: 'https://github.com/20essentials/project-000-551',
-    web: 'https://20essentials.github.io/project-000-551/',
-    localImage: './assets/n551.avif',
+    title: 'Login Linbet',
+    repo: 'https://github.com/20essentials/project-1005',
+    web: 'https://stackblitz.com/github/20essentials/project-1005?file=client%2Fscript.js',
+    localImage: '/assets/project-1005.avif',
     id: '009'
   },
   {
-    title: 'Razim Hover',
-    repo: 'https://github.com/20essentials/project-000-504',
-    web: 'https://20essentials.github.io/project-000-504/',
-    localImage: './assets/n504.avif',
+    title: 'SignUp Split',
+    repo: 'https://github.com/20essentials/project-1006',
+    web: 'https://stackblitz.com/github/20essentials/project-1006?file=client%2Fscript.js',
+    localImage: '/assets/project-1006.avif',
     id: '010'
   },
   {
-    title: 'Ink Fondo',
-    repo: 'https://github.com/20essentials/project-000-818',
-    web: 'https://20essentials.github.io/project-000-818/',
-    localImage: './assets/n818.avif',
+    title: 'Login Revolt',
+    repo: 'https://github.com/20essentials/project-1007',
+    web: 'https://stackblitz.com/github/20essentials/project-1007?file=client%2Fscript.js',
+    localImage: '/assets/project-1007.avif',
     id: '011'
   },
   {
-    title: 'MiniBlog Tech',
-    repo: 'https://github.com/20essentials/project-000-002',
-    web: 'https://20essentials.github.io/project-000-002/',
-    localImage: './assets/n2.avif',
+    title: 'Signup Dilemma',
+    repo: 'https://github.com/20essentials/project-1009',
+    web: 'https://stackblitz.com/github/20essentials/project-1009?file=client%2Fscript.js',
+    localImage: '/assets/project-1009.avif',
     id: '012'
   },
   {
-    title: 'Hibu Pattern',
-    repo: 'https://github.com/20essentials/project-000-810',
-    web: 'https://20essentials.github.io/project-000-810/',
-    localImage: './assets/n810.avif',
+    title: 'Login Ewig',
+    repo: 'https://github.com/20essentials/project-1010',
+    web: 'https://stackblitz.com/github/20essentials/project-1010?file=client%2Fscript.js',
+    localImage: '/assets/project-1010.avif',
     id: '013'
   },
   {
-    title: 'Glowing Text',
-    repo: 'https://github.com/20essentials/project-000-801',
-    web: 'https://20essentials.github.io/project-000-801/',
-    localImage: './assets/n801.avif',
+    title: 'Signup Snet',
+    repo: 'https://github.com/20essentials/project-1012',
+    web: 'https://stackblitz.com/github/20essentials/project-1012?file=index.js',
+    localImage: '/assets/project-1012.avif',
     id: '014'
   },
   {
-    title: 'Pixelated Image',
-    repo: 'https://github.com/20essentials/project-000-509',
-    web: 'https://20essentials.github.io/project-000-509/',
-    localImage: './assets/n509.avif',
+    title: 'Login Trun',
+    repo: 'https://github.com/20essentials/project-1013',
+    web: 'https://stackblitz.com/github/20essentials/project-1013?file=index.js',
+    localImage: '/assets/project-1013.avif',
     id: '015'
   },
   {
-    title: 'Image Animation',
-    repo: 'https://github.com/20essentials/project-000-858',
-    web: 'https://20essentials.github.io/project-000-858/',
-    localImage: './assets/n858.avif',
+    title: 'Signup Zod',
+    repo: 'https://github.com/20essentials/project-1015',
+    web: 'https://stackblitz.com/github/20essentials/project-1015?file=index.js',
+    localImage: '/assets/project-1015.avif',
     id: '016'
   },
   {
-    title: 'Standalone Background',
-    repo: 'https://github.com/20essentials/project-000-507',
-    web: 'https://20essentials.github.io/project-000-507/',
-    localImage: './assets/n507.avif',
+    title: 'Login Bentez',
+    repo: 'https://github.com/20essentials/project-1018',
+    web: 'https://stackblitz.com/github/20essentials/project-1018?file=index.js',
+    localImage: '/assets/project-1018.avif',
     id: '017'
   },
   {
-    title: 'Infinity Background',
-    repo: 'https://github.com/20essentials/project-000-506',
-    web: 'https://20essentials.github.io/project-000-506/',
-    localImage: './assets/n506.avif',
+    title: 'Signup Trem',
+    repo: 'https://github.com/20essentials/project-1025',
+    web: 'https://stackblitz.com/github/20essentials/project-1025?file=index.js',
+    localImage: '/assets/project-1025.avif',
     id: '018'
   },
   {
-    title: 'Viewport Effect',
-    repo: 'https://github.com/20essentials/project-000-872',
-    web: 'https://20essentials.github.io/project-000-872/',
-    localImage: './assets/n872.avif',
+    title: 'Login Comsuption',
+    repo: 'https://github.com/20essentials/project-1030',
+    web: 'https://stackblitz.com/github/20essentials/project-1030?file=index.js',
+    localImage: '/assets/project-1030.avif',
     id: '019'
   },
   {
-    title: 'View() + Scale()',
-    repo: 'https://github.com/20essentials/project-000-875',
-    web: 'https://20essentials.github.io/project-000-875/',
-    localImage: './assets/n875.avif',
+    title: 'Signup Binary',
+    repo: 'https://github.com/20essentials/project-1034',
+    web: 'https://stackblitz.com/github/20essentials/project-1034?file=index.js',
+    localImage: '/assets/project-1034.avif',
     id: '020'
   }
 ];
 ---
 
-<section>
-  {
-    arrayCards.map(({ id, localImage, repo, title, web }) => (
-      <aside class='card'></aside>
-    ))
-  }
-</section>
+<article id='smooth-wrapper'>
+  <section id='smooth-content'>
+    <Hero />
+    <section class='am-content'>
+      {
+        arrayCards.map(({ id, localImage, repo, title, web }, i) => (
+          <Fragment>
+            <aside class='am-card' title={title}>
+              <img class='am-your-img' src={baseUrl(localImage)} alt={title} />
+            </aside>
+            <aside class='am-card am-card-transparent' title={title}>
+              <img src={baseUrl('/assets/transparent.png')} alt={title} />
+            </aside>
+          </Fragment>
+        ))
+      }
+    </section>
+  </section>
+</article>
+
+<script>
+  import { gsap } from 'gsap';
+  import { ScrollTrigger } from 'gsap/ScrollTrigger';
+  import { ScrollSmoother } from 'gsap/ScrollSmoother';
+  gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
+
+  const smooth = ScrollSmoother.create({
+    effects: true,
+  });
+
+  smooth.effects('img.am-your-img', { speed: 'auto' });
+</script>
 
 <style>
-  section {
-    min-height: 100vh;
+  .super-content {
+    position: relative;
+    height: max-content;
+    background-color: orange;
+  }
+
+  .am-content {
+    min-height: 200vh;
+    height: max-content;
     display: grid;
+    position: relative;
     padding: 2.2vmax;
     gap: 2.2vmax;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(17vmax, 1fr));
+    grid-template-columns: 1fr 1fr 1fr;
+
+    @media (width <= 1111px) and (orientation: portrait) {
+      grid-template-columns: 1fr 1fr;
+
+      .am-card:nth-child(4n + 3) {
+        transform: translateX(100%);
+      }
+    }
+
+    .am-card {
+      position: relative;
+      overflow: hidden;
+      height: 80vh;
+      max-height: 30vmax;
+
+      &.am-card-transparent {
+        pointer-events: none;
+      }
+
+      &:last-child {
+        display: none;
+      }
+
+      img {
+        position: absolute;
+        width: 100%;
+        height: 120%; /* This is the difference */
+        object-fit: cover;
+        bottom: 0;
+      }
+    }
   }
 </style>

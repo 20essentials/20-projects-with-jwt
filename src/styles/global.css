@@ -32,11 +32,12 @@ button {
 }
 
 @font-face {
-  font-family: 'AnotherDanger';
-  src: url('./assets/AnotherDanger.otf') format('opentype');
+  font-family: 'Yellow-Style';
+  src: url('./assets/Yellow-Style.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
+
 
 body {
   min-height: 100vh;
@@ -47,11 +48,11 @@ body {
 
 h1,
 h2 {
-  font-family: 'AnotherDanger';
+  font-family: 'Yellow-Style';
 }
 
 body {
-  --sb-track-color: #000;
+  --sb-track-color: #171437;
   --sb-thumb-color: var(--gradient-btn);
   --sb-size: 0.7vmax;
 }
