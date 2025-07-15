@@ -153,9 +153,9 @@ const arrayCards = [
       {
         arrayCards.map(({ id, localImage, repo, title, web }, i) => (
           <Fragment>
-            <aside class='am-card' title={title}>
+            <a class='am-card' title={title} href={repo}>
               <img class='am-your-img' src={baseUrl(localImage)} alt={title} />
-            </aside>
+            </a>
             <aside class='am-card am-card-transparent' title={title}>
               <img src={baseUrl('/assets/transparent.png')} alt={title} />
             </aside>
